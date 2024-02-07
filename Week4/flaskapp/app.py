@@ -14,9 +14,9 @@ model = joblib.load(r"D:\DataGlacier\DataGlacierInternship\Week4\iris_model.pkl"
 # Define a route for the home page
 @app.route('/')
 def home():
-    return render_template('index.html')
+   return render_template('index.html')
 
-# Define a route for prediction
+#Define a route for prediction
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get input from the form
@@ -35,4 +35,4 @@ def predict():
     return render_template('result.html', species=species)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
